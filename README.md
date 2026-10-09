@@ -34,10 +34,14 @@ then we say to guess lower and get the input again
 if the guess is correct
 we say that guess is correct and display the score
 
+score is a global variable 
+that is initialised at 0 and incremeneted by 1 at every guess
 
 
 
 
 Ideas for V2 --->
 Hot/Cold Option
+Add try again feature (Recursion)
 Tracks Best Score (function for new guess added)
+Set Range

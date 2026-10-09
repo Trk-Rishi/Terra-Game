@@ -20,27 +20,39 @@ we display his score
 """
 
 
-"""
-Ideas for V2 --->
-Hot/Cold Option
-Tracks Best Score (function for new guess added)
-"""
 ###Time is so we can add a little pause between guesses and outputs 
-
+num_guesses = 0 #initialize score
 answer = random.randint(1,1000)
-print("Hi")
-print(answer)
+print("Guess the Random Number !!")
+print("..........")
+time.sleep(1)
 guess = int(input("Enter your guess: "))
-
+print("..........")
+time.sleep(1)
 while True:
     if answer > guess:
         print("Guess Higher!!")
         guess = int(input("Enter your guess: "))
-        
+        num_guesses += 1
+        print("..........")
+        time.sleep(1)
     elif guess > answer:
         print("Guess Lower!!")
         guess = int(input("Enter your guess: "))
+        num_guesses += 1
+        print("..........")
+        time.sleep(1)
 
     elif guess == answer:
+        num_guesses += 1
         print("Congratulations , You guess correctly")
+        print("..........")
+        time.sleep(1)
+        print("The number was :",answer)
+        print("..........")
+        time.sleep(1)
+        print("Total Number of Attempts: ",num_guesses)
+        print("..........")
+        print()
         break        
+#Therefore this is finally done and we can run this code to play the game and guess the number between 1-1000
