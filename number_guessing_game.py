@@ -27,7 +27,20 @@ Tracks Best Score (function for new guess added)
 """
 ###Time is so we can add a little pause between guesses and outputs 
 
-Answer = random.randint(1,1000)
-Guess = int(input("Enter your guess: "))
-while Guess != Answer:
-    print("working")
+answer = random.randint(1,1000)
+print("Hi")
+print(answer)
+guess = int(input("Enter your guess: "))
+
+while True:
+    if answer > guess:
+        print("Guess Higher!!")
+        guess = int(input("Enter your guess: "))
+        
+    elif guess > answer:
+        print("Guess Lower!!")
+        guess = int(input("Enter your guess: "))
+
+    elif guess == answer:
+        print("Congratulations , You guess correctly")
+        break        
